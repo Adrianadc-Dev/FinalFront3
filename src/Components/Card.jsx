@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
+import { useContextGlobal } from "./utils/global.context";
 // import { useContextGlobal } from "./utils/global.context";
 
 const Card = ({ odontologo }) => {
   const {name, username, id } = odontologo
-  // const {setFavs} = useContextGlobal();
-  
-
+ 
+  const {setFavs}= useContextGlobal();
   const addFav = ()=>{
-    // Aqui iria la logica para agregar la Card en el localStorage
+    setFavs((favs)=>[...favs , odontologo] )
   }
 
   return (
@@ -19,7 +19,6 @@ const Card = ({ odontologo }) => {
         <h3>{username}</h3>
       </Link>
 
-        {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
         <button onClick={addFav} className="favButton">Add fav</button>
     </div>
   );
