@@ -28,6 +28,7 @@ nav{
   justify-content:flex-end;
   padding: 1rem 3rem;
   background-color: #ccc ;
+  margin-bottom: 4rem;
 }
 
 a{
@@ -47,9 +48,9 @@ footer {
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
   height: 40px;
-  margin-top: 2rem;
+  margin-top: 6rem;
+  background-color: #ccc;
 }
 
 footer > img{

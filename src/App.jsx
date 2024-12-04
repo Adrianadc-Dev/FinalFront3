@@ -7,9 +7,11 @@ import Contact from "./Routes/Contact";
 import Favs from "./Routes/Favs";
 
 
+
 function App() {
   return (
       <div className="App">
+        
           <Navbar/>
           <Routes>
             <Route path="/" element={<Home />}/>
@@ -18,6 +20,7 @@ function App() {
             <Route path="*" element={<h1>Error 404 - not faund</h1>}/>
           </Routes>
           <Footer/>
+       
       </div>
   );
 }

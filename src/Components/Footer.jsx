@@ -1,10 +1,9 @@
-import React from 'react'
-
+import "../styles/index.css"
 const Footer = () => {
   return (
     <footer>
-        <p>Powered by</p>
-        <img src="./img/DH.png" alt='DH-logo' />
+        <p>Powered by DIGITAL HOUSE </p>
+        
     </footer>
   )
 }
