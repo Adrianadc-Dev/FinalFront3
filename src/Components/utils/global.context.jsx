@@ -13,16 +13,18 @@ const lsFavs = JSON.parse(localStorage.getItem("...state.favs"))|| [];
 
 const initialState = {
   favs:(lsFavs),
-  odontologos:[]
+  odontologos:[],
+  theme:'light'
 
 }
+
 const ContextProvider = ({ children }) => {
   const [state, dispatch]= useReducer(reducer, initialState);
   // const [favs, setFavs]= useState((lsFavs)) ;
   // const [odontologos, setOdontologos]= useState([]);
   // const [theme, setTheme]=useState("")
   const url = "https://jsonplaceholder.typicode.com/users";
-  
+  console.log(state.theme)
   useEffect(()=>{
     localStorage.setItem("favs", JSON.stringify(...state.favs))
 

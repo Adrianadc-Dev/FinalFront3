@@ -1,12 +1,25 @@
 import "../styles/index.css"
 import { Link } from 'react-router-dom'
+import { useContextGlobal } from "./utils/global.context";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Navbar = () => {
-  const changeTheme=()=>{
 
-  }
+  const {dispatch}= useContextGlobal();
+  const {state}=useContextGlobal();
+  
+  const changeTheme = ()=>{
+    const actual = state.theme ==='light' ? 'dark': 'light'
+    
+    console.log(actual)
+    
+   dispatch({
+      type:"changeTheme", 
+      payload: actual}
+  )
+  
+}
 
   return (
     <nav>
