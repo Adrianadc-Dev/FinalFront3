@@ -5,13 +5,13 @@ import { useContextGlobal } from "../Components/utils/global.context";
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
-  const{odontologo}= useContextGlobal();
+  const{favs}= useContextGlobal();
 
   return (
     <>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
-        {odontologo.map((odontologo)=>(
+        {favs.map((odontologo)=>(
           <Card key={odontologo.id} odontologo={odontologo}/>
         ))}
         {/* este componente debe consumir los destacados del localStorage */}
