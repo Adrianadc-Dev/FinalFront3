@@ -1,10 +1,10 @@
-export const reducer = (state, action) => {
-    switch (action.type) {
-      case "GET_RECIPES":
-        return { ...state, recipes: action.payload };
-      case "ADD_CART":
-        return { ...state, cart: [...state.cart, action.payload] };
-      default:
-        throw new Error("Acción no existente");
-    }
-  };
+export const reducer=(state, action)=>{
+  switch(action.type){
+    case "obtenerOdontologo":
+      return{...state, odontologos: action.payload }
+    case "addFavs":
+      return{...state, favs: [...state.favs, action.payload]}
+    default:
+      throw new Error("accion no existente")
+  }
+  }
