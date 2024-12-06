@@ -1,21 +1,18 @@
 /* eslint-disable react/prop-types */
-import { Link, useLocation } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useContextGlobal } from "./utils/global.context";
 import "../styles/index.css"
 
 const Card = ({ odontologo }) => {
   const {name, username, id } = odontologo
  
-  const {dispatch}= useContextGlobal();
-  const addFav = ()=>{
-    alert("Odontologo agregado a favoritos")
-    dispatch({
-      type:"addFavs", 
-      
-      payload: odontologo})
-    // setFavs((favs)=>[...favs , odontologo] )
+  const {dispatch, state}= useContextGlobal();
+
+  const findFav  = state.favs.find((fav)=> fav.id===odontologo.id);
+  const toggleFav =()=>{
+    dispatch ({type: findFav? "deleteFavs": "addFavs", payload: odontologo})
   }
-  const location = useLocation();
+
 
   return (
     <div className="card">
@@ -24,9 +21,10 @@ const Card = ({ odontologo }) => {
         <h3>{name}</h3>
         <h3>{username}</h3>
       </Link>
-      {location.pathname=="/favs" ? (""): 
-        <button onClick={addFav} className="favButton">Add fav</button>
-      }
+      <button onClick={toggleFav} className="favButton">{findFav ? "Delete": "Add fav"}</button>
+      {/* {location.pathname=="/favs" ? (""): 
+        
+      } */}
 
         
     </div>
