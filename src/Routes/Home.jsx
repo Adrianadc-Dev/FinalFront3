@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <main className={state.theme ==='light'? 'light-theme' : 'dark-theme'} >
-      <h1>Bienvenido a CLinica Odontologica</h1>
+      <h1>Bienvenido a Clinica Odontologica</h1>
       <div className='card-grid'>
        {state.odontologos.map((odontologo)=>{
           return <Card key={odontologo.id} odontologo={odontologo}/>

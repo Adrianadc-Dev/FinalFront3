@@ -8,10 +8,11 @@ const Card = ({ odontologo }) => {
  
   const {dispatch}= useContextGlobal();
   const addFav = ()=>{
+    alert("Odontologo agregado a favoritos")
     dispatch({
       type:"addFavs", 
       
-      payload:{...odontologo, odontologo}})
+      payload: odontologo})
     // setFavs((favs)=>[...favs , odontologo] )
   }
   const location = useLocation();
@@ -19,7 +20,7 @@ const Card = ({ odontologo }) => {
   return (
     <div className="card">
        <Link to={`/detail/${id}`}>
-        <img className= "imgCard" src={"/public/images/doctor.jpg"} alt={odontologo} />
+        <img className= "imgCard" src={"/images/doctor.jpg"} alt={odontologo} />
         <h3>{name}</h3>
         <h3>{username}</h3>
       </Link>
