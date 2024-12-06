@@ -15,8 +15,10 @@ code {
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
-  width: 100%;
+  margin-bottom: 10px;
+  width: 80%;
   cursor: pointer;
+  
 }
 
 h1{
@@ -27,8 +29,22 @@ nav{
   display: flex;
   justify-content:flex-end;
   padding: 1rem 3rem;
-  background-color: #ccc ;
-  margin-bottom: 4rem;
+  background-color: #eae6e6 ;
+  /* margin-bottom: 4rem; */
+}
+.nav-dark{
+  background-color: #282727;
+  
+  
+}
+.nav-dark h4{
+  color: white; 
+
+}
+.nav-dark button{
+  background-color: #ccc;
+  color: #000;
+
 }
 
 a{
@@ -49,8 +65,8 @@ footer {
   position: relative;
   bottom: 0;
   height: 40px;
-  margin-top: 6rem;
-  background-color: #ccc;
+  /* margin-top: 6rem; */
+  background-color: #eae6e6 ;
 }
 
 footer > img{
@@ -60,6 +76,14 @@ footer > img{
 footer > p{
   margin: 0;
   padding-top: 0.7rem;
+}
+.footer-dark{
+  background-color: #282727;
+  
+}
+.footer-dark p{
+  color: white;
+  
 }
 
 /* form{
@@ -80,7 +104,7 @@ footer > p{
   width: 350px;
   padding: 20px;
   border-radius: 10px;
-  background-color: #ccc;
+  background-color: #cfcccc ;
 }
 .form label {
   width: 100%;
@@ -133,7 +157,6 @@ margin-left: 15px;
   width: 150px;
   align-self: center;
  
-  
 }
 
 .card:hover{
@@ -166,13 +189,29 @@ td, th {
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #fffafa;
 }
 
-.dark{
+.dark-theme{
   background-color: #12121296;
   color: white;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  justify-items: center;
 }
-.dark > a {
+.dark-theme > a {
   color: white;
+}
+.dark-theme form{
+  background-color: rgb(84, 80, 80);
+}
+.light-theme{
+  background-color: #fef8f896;
+  color: rgb(0, 0, 0);
+  padding-top: 20px;
+  padding-bottom: 30px;
+  justify-items: center;
+}
+.-theme > a {
+  color: rgb(4, 4, 4);
 }

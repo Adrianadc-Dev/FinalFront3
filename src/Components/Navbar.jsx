@@ -22,7 +22,7 @@ const Navbar = () => {
 }
 
   return (
-    <nav>
+    <nav className={state.theme ==='light'? 'nav' : 'nav-dark'}>
       <Link to="/">
       <h4>Home</h4>
       </Link>
