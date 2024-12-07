@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import { Link} from "react-router-dom";
 import { useContextGlobal } from "./utils/global.context";
 import "../styles/index.css"
@@ -22,9 +22,7 @@ const Card = ({ odontologo }) => {
         <h3>{username}</h3>
       </Link>
       <button onClick={toggleFav} className="favButton">{findFav ? "Delete": "Add fav"}</button>
-      {/* {location.pathname=="/favs" ? (""): 
-        
-      } */}
+      
 
         
     </div>

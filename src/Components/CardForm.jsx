@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import "../styles/index.css"
 const CardForm = ({nombre, email}) => {
   return (

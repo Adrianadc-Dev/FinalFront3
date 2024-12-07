@@ -1,10 +1,7 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/prop-types */
+
 import axios from "axios";
 import { createContext, useContext, useEffect, useReducer} from "react";
 import { reducer } from "../../reducers/reducer";
-
-// eslint-disable-next-line react-refresh/only-export-components
 
 
 const ContextGlobal = createContext();
@@ -20,9 +17,7 @@ const initialState = {
 
 const ContextProvider = ({ children }) => {
   const [state, dispatch]= useReducer(reducer, initialState);
-  // const [favs, setFavs]= useState((lsFavs)) ;
-  // const [odontologos, setOdontologos]= useState([]);
-  // const [theme, setTheme]=useState("")
+ 
   const url = "https://jsonplaceholder.typicode.com/users";
   console.log(state.theme)
   useEffect(()=>{
@@ -35,7 +30,7 @@ useEffect(()=>{
   
     console.log(res.data)
     dispatch({type:"obtenerOdontologo", payload: res.data})
-    // setOdontologos(res.data)
+   
     
   });
 },[]);
